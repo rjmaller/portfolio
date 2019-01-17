@@ -1,0 +1,97 @@
+---
+title: "The Titanic: Predicting a Binary Outcome Using a Classification Tree"
+author: "R Jeremiah Maller"
+date: "11/29/2017"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+```{r}
+# Libraries #
+
+library(readr)
+library(dplyr)
+library(ggplot2)
+library(rpart)
+library(rpart.plot)
+library(ggthemes)
+```
+
+```{r}
+# Import and load datafiles and view data types #
+
+test <- read_csv("~/Downloads/test.csv")
+#View(test)
+train <- read_csv("~/Downloads/train.csv")
+Survived <- train$Survived
+train$Survived <- NULL
+dataset <- bind_rows(train, test)
+```
+
+```{r}
+# Data Cleaning #
+
+# NA Fare: 1 record: Passenger 1044 
+dataset$Fare[dataset$PassengerId == 1044] <- median(dataset$Fare, na.rm = TRUE)
+# NA Age: 263 records
+dataset$Age <- sapply(dataset$Age, FUN=function(x) {ifelse(is.na(x),median(dataset$Age, na.rm = TRUE),x)})
+# Missing Values for Embarked: 2 records
+table(dataset$Embarked) /sum(dataset$Embarked != "")
+# 'S' applied to missing values
+dataset$Embarked[c(62,830)] <- "S"
+# Missing Values for Cabin: 1014 records = 77%
+1 - (sum(dataset$Cabin != "")/nrow(dataset))
+dataset$Cabin <- substr(dataset$Cabin,1,1)
+table(dataset$Cabin)
+dataset$Cabin[dataset$Cabin == ""] <- "H"
+
+#Factor
+factor_vars <- c('PassengerId','Pclass','Sex','Embarked','Cabin')
+dataset[factor_vars] <- lapply(dataset[factor_vars], function(x) as.factor(x))
+
+# Splitting train and test data
+train_clean <- dataset[1:891,]
+test_clean <- dataset[892:1309,]
+train_clean$Survived <- Survived
+x <- cbind(train_clean,Survived)
+```
+
+```{r}
+# Exploratory Data Analysis #
+
+# Identify missing data
+apply(train, 2, function (x) { sum(is.na(x)) })
+
+# Plot survival by sex
+ggplot(train_clean, aes(Sex, fill = factor(Survived))) + 
+  geom_bar(stat = "count", position = 'dodge')+
+  theme_few() +
+  xlab("Sex") +
+  ylab("Count") +
+  scale_fill_discrete(name = "Survived") + 
+  ggtitle("Sex vs Survived") +
+  scale_fill_manual(values=c("#800020", "#0000CD"))
+```
+
+
+```{r}
+# Building a classification tree to predict a binary outcome (survival) #
+fit <- rpart(Survived ~ Pclass + Sex + Age + SibSp + Parch + Fare + Embarked,
+               data=train_clean,
+               method="class")
+new.fit <- prp(fit,snip=TRUE)$obj
+summary(new.fit)
+printcp(new.fit)
+rpart.plot(new.fit, type=1, extra = 102)
+#, control=rpart.control(minsplit=3, cp=0)
+```
+
+```{r}
+# Classification Tree Prediction Output #
+predict_dt <- predict(fit, test_clean, type = "class")
+result <- data.frame(PassengerID = test_cleanned$PassengerId, Survived = predict_dt)
+write.csv(result, file="result.csv", row.names = FALSE)
+# If you liked what you saw, would like to have a chat with me about the portfolio, 
+# work opportunities, or collaboration, email me at rjmaller@gmail.com 
+```

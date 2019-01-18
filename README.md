@@ -13,11 +13,13 @@ This repository contains a portfolio of recent data science projects completed b
   
 	- [Web scraping using Beautiful Soup in Python](https://github.com/rjmaller/portfolio/blob/master/Web%20Scraping%20with%20Python%20-%20CS131A%20Webpage%20Data.ipynb): Creating a Python web scraper to collect text and hyperlink data from websites, save it as a CSV file and dataframe, and carry out textual analysis.
 	
+_Tools: scikit-learn, NumPy, Pandas, Matplotlib, Beautiful Soup 4, NLTK
+	
 - ### Academic Works
 
-- [MS Economics Thesis: The Impact of Cleft Lip and Palate Repair Surgery on Cognitive and Academic Outcomes for Teens in India](https://github.com/rjmaller/portfolio/blob/master/R%20Jeremiah%20Maller%20-%20Impact%20of%20Cleft%20Lip%20and%20Palate%20Repair%20Surgery%20on%20Cognitive.pdf): A difference-in-differences regression estimation method is used to identify the causal impact of the surgical cleft repair intervention by comparing the life outcomes of teens that received the treatment (cleft repair surgery) to their nearest age (non-cleft) siblings. And in turn comparing this difference to the difference between teens with cleft who did not have access to the surgery at a young age and their own (non-cleft) siblings. The difference-in-differences method compares changes or differences in an untreated comparison group to changes or differences in a treatment group to construct a counterfactual estimate of how outcomes would have evolved in the absence of treatment.
+	- [MS Economics Thesis: The Impact of Cleft Lip and Palate Repair Surgery on Cognitive and Academic Outcomes for Teens in India](https://github.com/rjmaller/portfolio/blob/master/R%20Jeremiah%20Maller%20-%20Impact%20of%20Cleft%20Lip%20and%20Palate%20Repair%20Surgery%20on%20Cognitive.pdf): A difference-in-differences regression estimation method is used to identify the causal impact of the surgical cleft repair intervention by comparing the life outcomes of teens that received the treatment (cleft repair surgery) to their nearest age (non-cleft) siblings. And in turn comparing this difference to the difference between teens with cleft who did not have access to the surgery at a young age and their own (non-cleft) siblings. The difference-in-differences method compares changes or differences in an untreated comparison group to changes or differences in a treatment group to construct a counterfactual estimate of how outcomes would have evolved in the absence of treatment.
 
   
-	_Tools: scikit-learn, NumPy, Pandas, Matplotlib, Beautiful Soup 4, NLTK
+	
 
 

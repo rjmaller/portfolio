@@ -1,7 +1,7 @@
 # Data Science Portfolio of R Jeremiah Maller
-This repository contains a portfolio of recent data science projects completed by R Jeremiah Maller for academic and self-learning purposes. Presented in the form of iPython notebooks and R markdown files.
+This repository contains a portfolio of recent data science projects completed for academic and self-learning purposes. Presented in the form of iPython notebooks and R markdown files.
 
-- [Resume of R Jeremiah Maller](https://github.com/rjmaller/portfolio/blob/master/Resume%20%20-%20R%20Jeremiah%20Maller.pdf): If you like what you see, and would like to chat with me about the portfolio, work opportunities, or collaboration, email me at rjmaller@gmail.com 
+- [Resume](https://github.com/rjmaller/portfolio/blob/master/Resume%20%20-%20R%20Jeremiah%20Maller.pdf): If you like what you see, and would like to chat about the portfolio, work opportunities, or collaboration, email rjmaller@gmail.com 
 
 ## Contents
 
@@ -13,7 +13,7 @@ This repository contains a portfolio of recent data science projects completed b
   
 	- [Web scraping using Beautiful Soup in Python](https://github.com/rjmaller/portfolio/blob/master/Web%20Scraping%20with%20Python%20-%20CS131A%20Webpage%20Data.ipynb): Creating a Python web scraper to collect text and hyperlink data from websites, save it as a CSV file and dataframe, and carry out textual analysis.
 	
-_Tools: scikit-learn, NumPy, Pandas, Matplotlib, Beautiful Soup 4, NLTK
+	_Tools: scikit-learn, NumPy, Pandas, Matplotlib, Beautiful Soup 4, NLTK
 	
 - ### Academic Works
 

@@ -5,7 +5,7 @@ This repository contains a portfolio of recent data science projects completed f
 
 ## Contents
 
-- ### Machine Learning & Natural Language Processing
+- ### Machine Learning
 
 	- [Sentiment Analysis of Movie Reviews](https://github.com/rjmaller/ECON628-01-rjmaller/blob/master/projects/NLP_Sentiment_Analysis_Movie_Reviews.ipynb): A predictive sentiment analysis model using natural language processing tools in Python to anticipate whether a movie review is positive or negative. Trained using a large body of text reviews culled from IMDB.
   

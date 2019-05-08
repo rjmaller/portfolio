@@ -6,14 +6,15 @@ This repository contains a portfolio of recent data science projects completed f
 ## Contents
 
 - ### Machine Learning
-
+	- [Scraping and Classifying Lost and Found Posts from Craigslist](https://github.com/rjmaller/portfolio/blob/master/Scraping%20and%20Classifying%20Lost%20and%20Found%20Posts%20from%20Craigslist.ipynb): Creating a Python web scrape to gather text from Craigslist posts using Scrapy. The scraped text is organized and stored using Pandas dataframes and pre-process and analyze the scraped text is done using Natural Language Toolkit, NLTK. A Naive Bayes classification model is userd to predict whether a post is lost or found, and what category of item is being described in the  post: cat, dog, phone, keys, wedding band, wallet, purse, or backpack, etc.
+	
 	- [Sentiment Analysis of Movie Reviews](https://github.com/rjmaller/ECON628-01-rjmaller/blob/master/projects/NLP_Sentiment_Analysis_Movie_Reviews.ipynb): A predictive sentiment analysis model using natural language processing tools in Python to anticipate whether a movie review is positive or negative. Trained using a large body of text reviews culled from IMDB.
   
 	- [The Titanic: Predicting a Binary Outcome Using a Classification Tree](https://github.com/rjmaller/portfolio/blob/master/Titanic%20Decision%20Tree%20Nov%2029.Rmd): A classification tree model using R to predict a binary outcome, determining which passengers were more likely to survive the sinking of the Titanic based on traits such as age, gender, and class.
   
 	- [Web scraping using Beautiful Soup in Python](https://github.com/rjmaller/portfolio/blob/master/Web%20Scraping%20with%20Python%20-%20CS131A%20Webpage%20Data.ipynb): Creating a Python web scraper to collect text and hyperlink data from websites, save it as a CSV file and dataframe, and carry out textual analysis.
 	
-	_Tools: scikit-learn, NumPy, Pandas, Matplotlib, Beautiful Soup 4, NLTK
+	_Tools: scikit-learn, NumPy, Pandas, Matplotlib, Beautiful Soup 4, NLTK, Scrapy
 - ### Data Visualization
 
 	- [Tableau Public Data Visualization Portfolio](https://public.tableau.com/profile/r.jeremiah.maller#!/)
